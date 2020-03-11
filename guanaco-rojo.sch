@@ -1,5 +1,5 @@
 EESchema Schematic File Version 5
-EELAYER 31 0
+EELAYER 32 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -18,52 +18,30 @@ Comment7 ""
 Comment8 ""
 Comment9 ""
 $EndDescr
-Connection ~ 1400 1700
-Connection ~ 1400 1750
-Connection ~ 1550 1750
-Connection ~ 1950 1750
-Connection ~ 1950 3250
-Connection ~ 1950 3700
-Connection ~ 2200 1750
-Connection ~ 2750 1750
-Connection ~ 3050 1750
-Connection ~ 3050 3250
-Connection ~ 3700 3850
 Connection ~ 3800 3250
-Connection ~ 3850 1750
-Connection ~ 4300 3250
-Connection ~ 4650 1750
-Connection ~ 4950 3250
+Connection ~ 2200 1750
 Connection ~ 6250 3100
+Connection ~ 1950 1750
+Connection ~ 3850 1750
+Connection ~ 3050 1750
+Connection ~ 4950 3250
+Connection ~ 3050 3250
+Connection ~ 1950 3250
+Connection ~ 3700 3850
+Connection ~ 2750 1750
+Connection ~ 1950 3700
+Connection ~ 4650 1750
+Connection ~ 4300 3250
+Connection ~ 1400 1750
 NoConn ~ 3650 1300
 Wire Wire Line
-	1400 1650 1400 1700
+	1400 1650 1400 1750
 Wire Wire Line
-	1400 1700 1400 1750
-Wire Wire Line
-	1400 1750 1400 1950
-Wire Wire Line
-	1400 1750 1550 1750
-Wire Wire Line
-	1400 2250 1400 2350
-Wire Wire Line
-	1400 2800 1400 2650
-Wire Wire Line
-	1450 1150 1650 1150
-Wire Wire Line
-	1550 1250 1550 1750
-Wire Wire Line
-	1550 1750 1600 1750
-Wire Wire Line
-	1600 2800 1400 2800
-Wire Wire Line
-	1650 1250 1550 1250
+	1400 1750 1600 1750
 Wire Wire Line
 	1800 3250 1950 3250
 Wire Wire Line
 	1800 3700 1950 3700
-Wire Wire Line
-	1850 4700 2200 4700
 Wire Wire Line
 	1950 1750 1900 1750
 Wire Wire Line
@@ -87,19 +65,25 @@ Wire Wire Line
 Wire Wire Line
 	2200 2100 2200 2200
 Wire Wire Line
+	2300 4600 2900 4600
+Wire Wire Line
 	2350 3250 2450 3250
 Wire Wire Line
-	2450 4600 1850 4600
+	2400 5050 2900 5050
 Wire Wire Line
-	2450 4900 2450 4600
+	2400 5150 2900 5150
+Wire Wire Line
+	2700 4500 2900 4500
+Wire Wire Line
+	2700 4700 2900 4700
+Wire Wire Line
+	2700 4800 2900 4800
 Wire Wire Line
 	2750 1750 3050 1750
 Wire Wire Line
 	2750 2750 2750 2850
 Wire Wire Line
 	2750 3250 3050 3250
-Wire Wire Line
-	3000 4650 3000 4950
 Wire Wire Line
 	3050 1400 3050 1750
 Wire Wire Line
@@ -117,13 +101,9 @@ Wire Wire Line
 Wire Wire Line
 	3250 2800 3050 2800
 Wire Wire Line
-	3300 4750 3550 4750
-Wire Wire Line
 	3450 3700 3700 3700
 Wire Wire Line
 	3550 2800 3800 2800
-Wire Wire Line
-	3550 4650 3000 4650
 Wire Wire Line
 	3600 3850 3700 3850
 Wire Wire Line
@@ -155,6 +135,8 @@ Wire Wire Line
 Wire Wire Line
 	4500 3700 4300 3700
 Wire Wire Line
+	4550 4550 4750 4550
+Wire Wire Line
 	4650 1400 4650 1750
 Wire Wire Line
 	4650 1750 5400 1750
@@ -169,7 +151,11 @@ Wire Wire Line
 Wire Wire Line
 	4950 3700 4800 3700
 Wire Wire Line
+	5050 4550 5200 4550
+Wire Wire Line
 	5450 3250 5600 3250
+Wire Wire Line
+	5500 4550 5650 4550
 Wire Wire Line
 	5750 3100 6250 3100
 Wire Wire Line
@@ -186,25 +172,27 @@ Text Notes 3750 4050 2    50   ~ 0
 Gain
 Text Notes 5900 3600 2    50   ~ 0
 Volume\n
-Text GLabel 1600 2800 2    50   Output ~ 0
-LED
 Text GLabel 1800 3250 0    50   Input ~ 0
 IN
-Text GLabel 2200 4700 2    50   Input ~ 0
+Text GLabel 2700 4500 0    50   Input ~ 0
 IN
-Text GLabel 3300 4750 0    50   Output ~ 0
+Text GLabel 2700 4700 0    50   Input ~ 0
+LED-
+Text GLabel 2700 4800 0    50   Output ~ 0
 OUT
+Text GLabel 4550 4550 0    50   Input ~ 0
+LED-
 Text GLabel 6350 3100 2    50   Output ~ 0
 OUT
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5E4FAADC
-P 1400 1700
-F 0 "#FLG01" H 1400 1775 50  0001 C CNN
-F 1 "PWR_FLAG" V 1400 1828 50  0000 L CNN
-F 2 "" H 1400 1700 50  0001 C CNN
-F 3 "~" H 1400 1700 50  0001 C CNN
-	1    1400 1700
+P 1400 1750
+F 0 "#FLG01" H 1400 1825 50  0001 C CNN
+F 1 "PWR_FLAG" V 1400 1878 50  0000 L CNN
+F 2 "" H 1400 1750 50  0001 C CNN
+F 3 "~" H 1400 1750 50  0001 C CNN
+	1    1400 1750
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -230,14 +218,25 @@ F 3 "" H 1400 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
-U 1 1 5E5871BF
-P 1450 1150
-F 0 "#PWR08" H 1450 900 50  0001 C CNN
-F 1 "GND" H 1455 977 50  0000 C CNN
-F 2 "" H 1450 1150 50  0001 C CNN
-F 3 "" H 1450 1150 50  0001 C CNN
-	1    1450 1150
+L power:+9V #PWR06
+U 1 1 5E743817
+P 2400 5050
+F 0 "#PWR06" H 2400 4900 50  0001 C CNN
+F 1 "+9V" H 2415 5223 50  0000 C CNN
+F 2 "" H 2400 5050 50  0001 C CNN
+F 3 "" H 2400 5050 50  0001 C CNN
+	1    2400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+9V #PWR09
+U 1 1 5E72E2EA
+P 5650 4550
+F 0 "#PWR09" H 5650 4400 50  0001 C CNN
+F 1 "+9V" H 5665 4723 50  0000 C CNN
+F 2 "" H 5650 4550 50  0001 C CNN
+F 3 "" H 5650 4550 50  0001 C CNN
+	1    5650 4550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -274,21 +273,32 @@ F 3 "" H 2200 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
-U 1 1 5E58AAF2
-P 2450 4900
-F 0 "#PWR09" H 2450 4650 50  0001 C CNN
-F 1 "GND" H 2455 4727 50  0000 C CNN
-F 2 "" H 2450 4900 50  0001 C CNN
-F 3 "" H 2450 4900 50  0001 C CNN
-	1    2450 4900
+L power:GND #PWR05
+U 1 1 5E7250A2
+P 2300 4600
+F 0 "#PWR05" H 2300 4350 50  0001 C CNN
+F 1 "GND" H 2305 4427 50  0000 C CNN
+F 2 "" H 2300 4600 50  0001 C CNN
+F 3 "" H 2300 4600 50  0001 C CNN
+	1    2300 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR05
+L power:GND #PWR07
+U 1 1 5E743D60
+P 2400 5150
+F 0 "#PWR07" H 2400 4900 50  0001 C CNN
+F 1 "GND" H 2405 4977 50  0000 C CNN
+F 2 "" H 2400 5150 50  0001 C CNN
+F 3 "" H 2400 5150 50  0001 C CNN
+	1    2400 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
 U 1 1 5E521728
 P 2750 2850
-F 0 "#PWR05" H 2750 2600 50  0001 C CNN
+F 0 "#PWR08" H 2750 2600 50  0001 C CNN
 F 1 "GND" H 2755 2677 50  0000 C CNN
 F 2 "" H 2750 2850 50  0001 C CNN
 F 3 "" H 2750 2850 50  0001 C CNN
@@ -297,20 +307,9 @@ F 3 "" H 2750 2850 50  0001 C CNN
 $EndComp
 $Comp
 L power:GND #PWR010
-U 1 1 5E591B5E
-P 3000 4950
-F 0 "#PWR010" H 3000 4700 50  0001 C CNN
-F 1 "GND" H 3005 4777 50  0000 C CNN
-F 2 "" H 3000 4950 50  0001 C CNN
-F 3 "" H 3000 4950 50  0001 C CNN
-	1    3000 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR06
 U 1 1 5E55587C
 P 6050 3350
-F 0 "#PWR06" H 6050 3100 50  0001 C CNN
+F 0 "#PWR010" H 6050 3100 50  0001 C CNN
 F 1 "GND" H 6055 3177 50  0000 C CNN
 F 2 "" H 6050 3350 50  0001 C CNN
 F 3 "" H 6050 3350 50  0001 C CNN
@@ -318,25 +317,14 @@ F 3 "" H 6050 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR07
+L power:GND #PWR011
 U 1 1 5E567FF7
 P 6250 3650
-F 0 "#PWR07" H 6250 3400 50  0001 C CNN
+F 0 "#PWR011" H 6250 3400 50  0001 C CNN
 F 1 "GND" H 6255 3477 50  0000 C CNN
 F 2 "" H 6250 3650 50  0001 C CNN
 F 3 "" H 6250 3650 50  0001 C CNN
 	1    6250 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R6
-U 1 1 5E55A984
-P 1400 2100
-F 0 "R6" H 1470 2145 50  0000 L CNN
-F 1 "4k7" H 1470 2055 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1330 2100 50  0001 C CNN
-F 3 "~" H 1400 2100 50  0001 C CNN
-	1    1400 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -351,10 +339,10 @@ F 3 "~" H 1750 1750 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R3
+L Device:R R2
 U 1 1 5E5438CE
 P 1950 3500
-F 0 "R3" H 2020 3545 50  0000 L CNN
+F 0 "R2" H 2020 3545 50  0000 L CNN
 F 1 "1M" H 2020 3455 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1880 3500 50  0001 C CNN
 F 3 "~" H 1950 3500 50  0001 C CNN
@@ -362,10 +350,10 @@ F 3 "~" H 1950 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L Device:R R3
 U 1 1 5E548EBB
 P 2200 3250
-F 0 "R2" V 2406 3250 50  0000 C CNN
+F 0 "R3" V 2406 3250 50  0000 C CNN
 F 1 "100k" V 2315 3250 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2130 3250 50  0001 C CNN
 F 3 "~" H 2200 3250 50  0001 C CNN
@@ -395,6 +383,17 @@ F 3 "~" H 4650 3700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
+L Device:R R6
+U 1 1 5E72BEDF
+P 5350 4550
+F 0 "R6" V 5556 4550 50  0000 C CNN
+F 1 "4k7" V 5465 4550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 4550 50  0001 C CNN
+F 3 "~" H 5350 4550 50  0001 C CNN
+	1    5350 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
 L Device:R R7
 U 1 1 5E566D25
 P 6250 3400
@@ -418,25 +417,25 @@ F 3 "~" H 1950 1950 50  0001 C CNN
 $EndComp
 $Comp
 L Device:LED D2
-U 1 1 5E55B5B8
-P 1400 2500
-F 0 "D2" V 1438 2382 50  0000 R CNN
-F 1 "LED" V 1347 2382 50  0000 R CNN
-F 2 "OPL_Connector:H2-2.54" H 1400 2500 50  0001 C CNN
-F 3 "~" H 1400 2500 50  0001 C CNN
-	1    1400 2500
-	0    -1   -1   0   
+U 1 1 5E729700
+P 4900 4550
+F 0 "D2" H 4893 4766 50  0000 C CNN
+F 1 "LED" H 4893 4675 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 4900 4550 50  0001 C CNN
+F 3 "~" H 4900 4550 50  0001 C CNN
+	1    4900 4550
+	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J1
-U 1 1 5E57A721
-P 1850 1250
-F 0 "J1" H 1930 1242 50  0000 L CNN
-F 1 "Conn_01x02" H 1930 1151 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1850 1250 50  0001 C CNN
-F 3 "~" H 1850 1250 50  0001 C CNN
-	1    1850 1250
-	1    0    0    1   
+L rockola_kicad_symbols:Power_Connector J2
+U 1 1 5E73BB6D
+P 3100 5050
+F 0 "J2" H 3180 5042 50  0000 L CNN
+F 1 "Power_Connector" H 3180 4951 50  0000 L CNN
+F 2 "rockola_kicad_footprints:Power_Header_2pin" H 3100 5050 50  0001 C CNN
+F 3 "~" H 3100 5050 50  0001 C CNN
+	1    3100 5050
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C2
@@ -510,7 +509,7 @@ U 1 1 5E550148
 P 3450 3850
 F 0 "RV1" V 3335 3850 50  0000 C CNN
 F 1 "B1M" V 3244 3850 50  0000 C CNN
-F 2 "OPL_Connector:H3-2.54" H 3450 3850 50  0001 C CNN
+F 2 "potentiometers:9MM_METAL_SHAFT" H 3450 3850 50  0001 C CNN
 F 3 "~" H 3450 3850 50  0001 C CNN
 	1    3450 3850
 	0    -1   -1   0   
@@ -521,32 +520,21 @@ U 1 1 5E5545F9
 P 5750 3250
 F 0 "RV2" V 5635 3250 50  0000 C CNN
 F 1 "A10k" V 5544 3250 50  0000 C CNN
-F 2 "OPL_Connector:H3-2.54" H 5750 3250 50  0001 C CNN
+F 2 "potentiometers:9MM_METAL_SHAFT" H 5750 3250 50  0001 C CNN
 F 3 "~" H 5750 3250 50  0001 C CNN
 	1    5750 3250
 	0    1    -1   0   
 $EndComp
 $Comp
-L Connector:AudioJack2 J2
-U 1 1 5E588642
-P 1650 4700
-F 0 "J2" H 1682 5023 50  0000 C CNN
-F 1 "Input" H 1682 4932 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1650 4700 50  0001 C CNN
-F 3 "~" H 1650 4700 50  0001 C CNN
-	1    1650 4700
+L rockola_kicad_symbols:Stomp_Connector J1
+U 1 1 5E7170D8
+P 3100 4600
+F 0 "J1" H 3180 4592 50  0000 L CNN
+F 1 "Stomp_Connector" H 3180 4501 50  0000 L CNN
+F 2 "rockola_kicad_footprints:Stomp_4pin" H 3100 4600 50  0001 C CNN
+F 3 "~" H 3100 4600 50  0001 C CNN
+	1    3100 4600
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:AudioJack2 J3
-U 1 1 5E58B6A5
-P 3750 4750
-F 0 "J3" H 3570 4767 50  0000 R CNN
-F 1 "Output" H 3570 4677 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3750 4750 50  0001 C CNN
-F 3 "~" H 3750 4750 50  0001 C CNN
-	1    3750 4750
-	-1   0    0    -1  
 $EndComp
 $Comp
 L 4xxx:4049 U1
