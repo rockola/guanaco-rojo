@@ -1,4 +1,4 @@
-update=Wed 11 Mar 2020 12:09:44 EET
+update=Wed 11 Mar 2020 16:54:20 EET
 version=1
 last_client=kicad
 [general]
@@ -12,10 +12,12 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[PcbFrame]
+version=1
 [SchematicFrame]
 version=1
 [sheetnames]
-1=00000000-0000-0000-0000-00005e68904f:
+1=00000000-0000-0000-0000-00005e68ba3e:
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -70,7 +72,7 @@ DimensionPrecision=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -249,3 +251,5 @@ uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
+[ModEditFrame]
+version=1

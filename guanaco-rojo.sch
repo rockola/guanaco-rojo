@@ -229,6 +229,17 @@ F 3 "" H 2400 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
+L power:+9V #PWR012
+U 1 1 5E74ABE8
+P 5000 5050
+F 0 "#PWR012" H 5000 4900 50  0001 C CNN
+F 1 "+9V" H 5015 5223 50  0000 C CNN
+F 2 "" H 5000 5050 50  0001 C CNN
+F 3 "" H 5000 5050 50  0001 C CNN
+	1    5000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
 L power:+9V #PWR09
 U 1 1 5E72E2EA
 P 5650 4550
@@ -303,6 +314,17 @@ F 1 "GND" H 2755 2677 50  0000 C CNN
 F 2 "" H 2750 2850 50  0001 C CNN
 F 3 "" H 2750 2850 50  0001 C CNN
 	1    2750 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5E74C04C
+P 5000 5150
+F 0 "#PWR013" H 5000 4900 50  0001 C CNN
+F 1 "GND" H 5005 4977 50  0000 C CNN
+F 2 "" H 5000 5150 50  0001 C CNN
+F 3 "" H 5000 5150 50  0001 C CNN
+	1    5000 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -432,9 +454,20 @@ U 1 1 5E73BB6D
 P 3100 5050
 F 0 "J2" H 3180 5042 50  0000 L CNN
 F 1 "Power_Connector" H 3180 4951 50  0000 L CNN
-F 2 "rockola_kicad_footprints:Power_Header_2pin" H 3100 5050 50  0001 C CNN
+F 2 "rockola_kicad_footprints:Power_Header_2pin_TOP" H 3100 5050 50  0001 C CNN
 F 3 "~" H 3100 5050 50  0001 C CNN
 	1    3100 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L rockola_kicad_symbols:Power_Connector J3
+U 1 1 5E7427D2
+P 5200 5050
+F 0 "J3" H 5280 5042 50  0000 L CNN
+F 1 "Alt. power" H 5280 4951 50  0000 L CNN
+F 2 "rockola_kicad_footprints:Power_Header_2pin" H 5200 5050 50  0001 C CNN
+F 3 "~" H 5200 5050 50  0001 C CNN
+	1    5200 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -542,7 +575,7 @@ U 3 1 5E4FDD79
 P 3350 1400
 F 0 "U1" H 3350 1716 50  0000 C CNN
 F 1 "4049" H 3350 1625 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 3350 1400 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3350 1400 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 3350 1400 50  0001 C CNN
 	3    3350 1400
 	1    0    0    -1  
@@ -553,7 +586,7 @@ U 1 1 5E501FE9
 P 3400 3250
 F 0 "U1" H 3400 3566 50  0000 C CNN
 F 1 "4049" H 3400 3475 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 3400 3250 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 3400 3250 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 3400 3250 50  0001 C CNN
 	1    3400 3250
 	1    0    0    -1  
@@ -564,7 +597,7 @@ U 4 1 5E4FE8A4
 P 4150 1400
 F 0 "U1" H 4150 1716 50  0000 C CNN
 F 1 "4049" H 4150 1625 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 4150 1400 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4150 1400 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 4150 1400 50  0001 C CNN
 	4    4150 1400
 	1    0    0    -1  
@@ -575,7 +608,7 @@ U 2 1 5E5028D7
 P 4650 3250
 F 0 "U1" H 4650 3566 50  0000 C CNN
 F 1 "4049" H 4650 3475 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 4650 3250 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4650 3250 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 4650 3250 50  0001 C CNN
 	2    4650 3250
 	1    0    0    -1  
@@ -586,7 +619,7 @@ U 5 1 5E4FF75E
 P 4950 1400
 F 0 "U1" H 4950 1716 50  0000 C CNN
 F 1 "4049" H 4950 1625 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 4950 1400 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 4950 1400 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 4950 1400 50  0001 C CNN
 	5    4950 1400
 	1    0    0    -1  
@@ -597,7 +630,7 @@ U 6 1 5E50056F
 P 5700 1750
 F 0 "U1" H 5700 2066 50  0000 C CNN
 F 1 "4049" H 5700 1975 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 5700 1750 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 5700 1750 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 5700 1750 50  0001 C CNN
 	6    5700 1750
 	1    0    0    -1  
@@ -608,7 +641,7 @@ U 7 1 5E505B97
 P 2750 2250
 F 0 "U1" H 2980 2295 50  0000 L CNN
 F 1 "4049" H 2980 2205 50  0000 L CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 2750 2250 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 2750 2250 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/intersil/documents/cd40/cd4049ubms.pdf" H 2750 2250 50  0001 C CNN
 	7    2750 2250
 	1    0    0    -1  
